@@ -2,7 +2,7 @@
 
 
 //page says coding quiz challange
-//upper left has link to "view high scores"
+//upper left has link to "view high scores" -- link to high score page
 //click button that says start quiz -- even listenter to start questions 
 //timer starts in upper right hand corner (75sec) --use set interval timer #9-10
 //first question appears with multiple choice answers  -- store questions in an array #18 line 9 
@@ -27,6 +27,14 @@
 //click "go back" and will return to beginning page
 //click 
 
+//event listener to start questions when start button is clicked
+var startButton = document.getElementById("start-button");
+
+
+
+
+startButton.addEventListener("click", startQuestions);
+
 
 var questions = [
   {
@@ -38,12 +46,27 @@ var questions = [
   }  
 ]
 
-inner HTML = "" //empty string 
+inner HTML = "" //empty string --clear previous question 
 
 var questionIndex = 0
 
 for(let i = 0; i< questions[questionIndex].choices.length; i++) {
-    const choice = questions[questionIndex].choices[i];
- //loop over choices, build a button, data attr to store index, omce button is clicked need an algo
+    const choices = questions[questionIndex].choices[i];
+ //loop over choices, build a button, data attr to store index, once button is clicked need an algo
  //compare the users choice and the correctIndex (answer)
+}
+//start questions function is called when the start button is clicked
+function startQuestions() {
+  startButton.style.display = "none";  //hide start button
+  timerCount = 75;
+  startTimer();
+
+  
+}
+
+function startTimer() {
+  time = setInterval(function()) {
+      timerCount--;
+
+  }
 }
