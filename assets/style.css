@@ -11,20 +11,17 @@ body {
 
 }
 
-.header {
-    padding:0;
-}
-
 .high-scores-nav {
-    padding: 10px;
-    font-size: 16px;
-    text-align: left;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    text-decoration: underline;
 }
 
 .timer {
-    margin-top: 0;
-    font-size: 16px;
-    text-align: right;
+    position: fixed;
+    right: 20px;
+    top: 20px;
 }
 
 main {
@@ -60,8 +57,40 @@ p {
 }
 button:hover {
     background-color:gray;
-
 }
+
 button:active {
     background-color: gray;
+}
+
+.question-container {
+    color: blue;
+}
+
+.choice {
+    margin: 10px 0;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;    
+    transition: background-color 0.3s ease;
+}
+
+.choice:hover {
+    background-color: gray;
+}
+
+.choice:active {
+    background-color: gray;
+}
+
+#answer-buttons {
+    list-style-type: none;      /*removes default list types */ 
+    padding: 0;
+}
+
+.hidden {
+    display: none;
 }
