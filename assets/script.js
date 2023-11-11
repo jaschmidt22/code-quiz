@@ -1,6 +1,4 @@
 //
-
-
 //page says coding quiz challange
 //upper left has link to "view high scores" -- link to high score page
 //click button that says start quiz -- even listenter to start questions 
@@ -29,44 +27,60 @@
 
 //event listener to start questions when start button is clicked
 var startButton = document.getElementById("start-button");
-
-
-
+var paragraph = document.querySelector("p");
+var questionContainer = document.getElementById("question-container");
+var timer = document.getElementById("timer"); 
 
 startButton.addEventListener("click", startQuestions);
 
 
-var questions = [
+var questionContainer= [
   {
-    question: "What color is the sky?",
-    choices : ["Blue", "Red", "Yellow", "Green"],
-    correctIndex: 0,
-
-        
-  }  
+    question: "Which JavaScript method is used to write in the browser's console?",
+    choices: ["console.write()", "console.log()", "console.output()", "console.write()"],
+    correctIndex: 1,     
+  }
 ]
+  //  question: 
+ // }  
 
-inner HTML = "" //empty string --clear previous question 
+
+//inner HTML = "" //empty string --clear previous question 
 
 var questionIndex = 0
 
-for(let i = 0; i< questions[questionIndex].choices.length; i++) {
-    const choices = questions[questionIndex].choices[i];
- //loop over choices, build a button, data attr to store index, once button is clicked need an algo
- //compare the users choice and the correctIndex (answer)
+for (let i = 0; i< questions[questionIndex].choices.length; i++) {
+    var choice = questions[questionIndex].choices[i];
+    var button = document.createElement("button");
+    button.textContent = choice;
+    //loop over choices, build a button, data attr to store index, 
+    button.setAttribute("data-index", i);
+    //once button is clicked need an algo to
+    //compare the users choice and the correctIndex (answer)
+    button.addEventListener("click", userChoice);
+    questionContainer.appendChild(button);
 }
+
 //start questions function is called when the start button is clicked
 function startQuestions() {
   startButton.style.display = "none";  //hide start button
+  paragraph.style.display = "none";    //hide paragraph
+  questionContainer.style.display = "block"; //show questions container
   timerCount = 75;
   startTimer();
-
-  
 }
 
 function startTimer() {
-  time = setInterval(function()) {
-      timerCount--;
+  let time = 75;
 
-  }
+  timer.textContent = time;
+  let timerInterval = setInterval(function() {   //set timer interval
+    time--;
+    timer.textContent = time;
+  }, 1000)
+}
+
+  
+  function userChoice(event) {
+
 }
