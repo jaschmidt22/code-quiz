@@ -31,14 +31,13 @@ main {
     margin-left: 200px;
     margin-right: 200px;
     margin-bottom: 30px;
-    border: 3px solid black;
     text-align: center;
 }
 
 
 h1 {
-   color: red;
-   text-align: center;   
+    color: red;
+    text-align: center;   
 }
 
 p {
@@ -55,6 +54,7 @@ p {
     cursor: pointer;    
     transition: background-color 0.3s ease;
 }
+
 button:hover {
     background-color:gray;
 }
@@ -67,7 +67,7 @@ button:active {
     color: blue;
 }
 
-.choice {
+.choices {
     margin: 10px 0;
     background-color: black;
     color: white;
@@ -78,16 +78,16 @@ button:active {
     transition: background-color 0.3s ease;
 }
 
-.choice:hover {
+.choices:hover {
     background-color: gray;
 }
 
-.choice:active {
+.choices:active {
     background-color: gray;
 }
 
-#answer-buttons {
-    list-style-type: none;      /*removes default list types */ 
+.answer-buttons {
+    list-style-type: none;      
     padding: 0;
 }
 
