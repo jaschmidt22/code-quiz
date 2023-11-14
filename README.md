@@ -9,6 +9,7 @@ I was asked to create an on-line quiz containing questions pertaining to JavaScr
 Once you have navigated to the code quiz page you will be presented with an introductory page with instructions. Once you click on the "Start Quiz" button, the first question will appear. After you select and answer, the next question will appear, and so on. Once the timer has ended or you have answered all the questions, the quiz will end. You will be given an opportunity to enter your initials and your score will be saved.
 ![Alt text](image.png)
 
+https://jaschmidt22.github.io/code-quiz/
 ## Credits
 
 Throughout the making of this project, I frequently referenced my class repository ASU-VIRT-FSF-PT-10-2023-U-LOLC. I also referenced Google, W3Schools, MDN Webdocs, and ChatGPT.
