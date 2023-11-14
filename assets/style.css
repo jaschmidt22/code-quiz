@@ -36,7 +36,7 @@ main {
 
 
 h1 {
-    color: red;
+    color: rgb(162, 4, 4);
     text-align: center;   
 }
 
@@ -87,10 +87,40 @@ button:active {
 }
 
 .answer-buttons {
-    list-style-type: none;      
+    display: block;      
     padding: 0;
+    margin: 10px 0;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;    
+    transition: background-color 0.3s ease;
 }
 
 .hidden {
     display: none;
+}
+
+.clear-scores-button {
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;    
+    transition: background-color 0.3s ease;
+}
+
+.go-back-button {
+    margin: 0 auto;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;    
+    transition: background-color 0.3s ease;
 }
